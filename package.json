@@ -1,0 +1,22 @@
+{
+  "name": "dalbit",
+  "displayName": "dalbit",
+  "publisher": "jongukc",
+  "description": "Warm accents on neutral dark, inspired by Gruber-Darker",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.55.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "dalbit",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dalbit-color-theme.json"
+      }
+    ]
+  }
+}
