@@ -350,7 +350,7 @@
     "symbolIcon.methodForeground": "#edc14a",
     "symbolIcon.keyForeground": "#edc14a",
     "symbolIcon.stringForeground": "#74bc42",
-    "symbolIcon.constantForeground": "#bc6838",
+    "symbolIcon.constantForeground": "#d07878",
     "symbolIcon.propertyForeground": "#7eb0cc",
     "symbolIcon.fieldForeground": "#7eb0cc",
     "symbolIcon.variableForeground": "#ced0d6",
@@ -431,7 +431,7 @@
     {
       "name": "Constant",
       "scope": "constant, support.constant, constant.language",
-      "settings": { "foreground": "#bc6838" }
+      "settings": { "foreground": "#d07878" }
     },
     {
       "name": "Keyword",
