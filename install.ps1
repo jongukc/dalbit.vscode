@@ -71,7 +71,7 @@ if ($CodeCmd) {
     & code --install-extension $Vsix --force
     Write-Host ""
     Write-Host "installed! restart VS Code, then:"
-    Write-Host "  Ctrl+Shift+P -> Preferences: Color Theme -> dalbit"
+    Write-Host "  Ctrl+Shift+P -> Preferences: Color Theme -> Dalbit"
 } else {
     Write-Host ""
     Write-Host "warning: 'code' command not found in PATH"

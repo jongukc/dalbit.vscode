@@ -11,11 +11,11 @@ TMPDIR="$(mktemp -d)"
 trap 'rm -rf "$TMPDIR"' EXIT
 
 mkdir -p "${TMPDIR}/extension/themes"
-cp "${SCRIPT_DIR}/package.json"                        "${TMPDIR}/extension/"
-cp "${SCRIPT_DIR}/themes/dalbit-color-theme.json"      "${TMPDIR}/extension/themes/"
+cp "${SCRIPT_DIR}/package.json" "${TMPDIR}/extension/"
+cp "${SCRIPT_DIR}/themes/dalbit-color-theme.json" "${TMPDIR}/extension/themes/"
 
 # [Content_Types].xml — required by VSIX format
-cat > "${TMPDIR}/[Content_Types].xml" << 'XMLEOF'
+cat >"${TMPDIR}/[Content_Types].xml" <<'XMLEOF'
 <?xml version="1.0" encoding="utf-8"?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
   <Default Extension=".json" ContentType="application/json"/>
@@ -24,7 +24,7 @@ cat > "${TMPDIR}/[Content_Types].xml" << 'XMLEOF'
 XMLEOF
 
 # extension.vsixmanifest — required by VSIX format
-cat > "${TMPDIR}/extension.vsixmanifest" << 'XMLEOF'
+cat >"${TMPDIR}/extension.vsixmanifest" <<'XMLEOF'
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
@@ -54,7 +54,7 @@ if command -v code &>/dev/null; then
     code --install-extension "$VSIX" --force
     echo ""
     echo "installed! restart VS Code, then:"
-    echo "  Ctrl+Shift+P → Preferences: Color Theme → dalbit"
+    echo "  Ctrl+Shift+P → Preferences: Color Theme → Dalbit"
 else
     echo ""
     echo "warning: 'code' command not found"
